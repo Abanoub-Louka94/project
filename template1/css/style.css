@@ -1,0 +1,559 @@
+*{
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+body{
+   font-family: "Work-Sans","sans-serif";
+}
+.container{
+   padding-left: 15px;
+   padding-right: 15px;
+   margin-left: auto;
+   margin-right: auto;
+   width: 100%;
+   max-width: 1200px;
+
+}
+/* Styles for Tablets (screen width between 768px and 1024px) */
+@media (max-width: 1024px) {
+   .container {
+       max-width: 960px;
+   }
+
+   .first-section, .second-section, .third-section, .fouth-section, .fifth-section {
+       flex-direction: column;
+       align-items: center;
+       text-align: center;
+   }
+
+   .third-section .select-one, .third-section .user, .third-section .star, .third-section .cart {
+       flex-direction: column;
+       margin-bottom: 10px;
+   }
+
+   .third-section .select-one form {
+       flex-direction: column;
+   }
+
+   .menu ul {
+       flex-direction: column;
+   }
+
+   .menu ul li {
+       margin-bottom: 10px;
+   }
+}
+
+/* Styles for Mobile (screen width below 768px) */
+@media (max-width: 768px) {
+   .container {
+       max-width: 100%;
+   }
+
+   /* Adjusting header sections for mobile */
+   .first-section h1 {
+       font-size: 24px;
+   }
+
+   .second-section .text3 {
+       font-size: 18px;
+   }
+
+   .menu ul {
+       display: none; 
+   }
+   .menu ul:active {
+       display: block; /* Show the menu when active */
+       text-align: center;
+   }
+
+   #hamburger {
+       display: block;
+       cursor: pointer;
+   }
+   #hamburger:hover +ul{
+    display :flex;
+    flex-direction: column;
+    position: absolute;
+    top:100%;
+    left: 0 ;
+    
+   }
+
+   .fouth-section .menu-one ul.first {
+       display: none;
+   }
+
+   .fouth-section .menu-one ul.first.active {
+       display: block;
+       flex-direction: column;
+   }
+
+   .third-section .text4 {
+       font-size: 20px;
+       margin-bottom: 15px;
+   }
+
+   /* Adjust form input fields and search bar */
+   .third-section .select-one {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+   }
+
+   .third-section .search-bar {
+       width: 100%;
+   }
+
+   .third-section .user, .third-section .star, .third-section .cart {
+       display: block;
+       text-align: center;
+       margin-bottom: 15px;
+   }
+
+   /* Adjust the product listing for mobile */
+   .all-paragraph {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+   }
+
+   .all-paragraph div {
+       width: 100%;
+       margin-bottom: 15px;
+   }
+}
+
+/* Extra small screens (screen width below 480px) */
+@media (max-width: 480px) {
+   .first-section h1 {
+       font-size: 18px;
+   }
+
+   .second-section .text3 {
+       font-size: 14px;
+   }
+
+   .third-section .text4 {
+       font-size: 18px;
+   }
+
+   .third-section .select-one {
+       width: 100%;
+   }
+
+   .third-section .search-input {
+       width: 100%;
+       padding: 10px;
+   }
+
+   .all-paragraph img {
+       width: 100%;
+       height: auto;
+   }
+
+   .footer {
+       text-align: center;
+   }
+}
+
+
+/*first section*/
+.first-section{
+  background-color: rgb(45, 45, 45);   
+   padding: 15px;
+}
+.first-section {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.first-section  .h1-text{
+   font-size:30px;
+   color: white;
+   text-transform:uppercase;
+}
+.first-section .button{
+   background-color: rgb(45, 45, 45);
+   width: 10%;
+   color: white;*/
+}
+
+
+/*second-section*/
+.second-section {
+   padding: 8px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   
+}   
+.first fa-solid fa-bars{
+   display: flex;
+   margin-left: auto;
+}
+.second-section .text3{
+   color : white;
+   
+}
+.menu ul {
+   list-style: none;
+   color: white;
+      }
+.submenu li{
+   color: black;
+}
+
+.menu li {
+   display: inline-block;
+   position: relative;
+   margin-left: 20px;
+  
+ }
+
+.menu a 
+{
+   display: block;
+   padding: 10px;
+   text-decoration: none;  
+}
+
+.menu .submenu {
+   display: none;
+   position: absolute;
+   top: 190%;
+   left: 0;
+   background-color: #ffff;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+   z-index: 1;
+   direction: rtl;
+   width: 100px;
+   height: 50px;
+   padding: 5px;
+  
+}
+
+.menu li:hover .submenu {
+   display: block;
+  
+}
+
+.second-section{
+   background-color: rgb(0, 0, 0);
+}
+
+.third-section .container{
+   display: flex;
+   justify-content: space-between;
+}
+.coth-menu ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+.coth-menu li {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+.coth-menu a {
+   text-decoration: none;
+   color: inherit;
+}
+.container{
+   padding: 5px;
+
+}
+ .user .drop-down-one{
+   position: relative;
+   display: inline-block;
+}
+
+.drop-down ,.user .drop-down-one,.drop-down-two ,.products-menu ,.drop-down-three {
+   display: none;
+   position: absolute;
+   background-color:white ;
+   width: 130px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+}
+.drop-down li ,.user .drop-down-one {
+   list-style-type: none;
+}
+.drop-down li a  {
+   color: black;
+   padding: 4px;
+   display: block;
+}
+
+.user:hover .drop-down-one{
+   display: block;
+   direction: ltr;
+}
+.search-bar {
+   display: inline-block;
+  
+}
+.search-input {
+  
+   font-size: 16px;
+   border: none; /* Removes the border */
+   border-radius: 4px; /* Optional: adds rounded corners */
+   box-shadow: 0 0 0 1px #ccc ;
+}
+.button-search {
+   display: inline-block;
+}
+.search-button {
+  
+   background-color: white;
+   border: none;
+   color: black;
+   cursor: pointer;
+   
+}
+.search-button svg {
+   width: 15px;
+   height: 15px;
+  
+}
+.select-one {
+   margin-bottom: 10px;
+}
+ 
+.coth{
+   border: none;
+   background-color: white;
+   
+}
+ul.first li a{
+   color: black;
+   text-decoration: none;
+}
+ul.first {
+   display: flex;
+   list-style-type: none;
+   justify-content: space-around;
+   align-items: center;
+}
+
+ul.first li {
+   padding: 10px;
+   position: relative;
+}
+
+ul.drop-down-two, ul.products-menu, ul.drop-down-three {
+   display: none; /* Hide dropdown menus by default */
+   position: absolute;
+   top: 100%;
+   left: 0;
+   background-color: #fff;
+   list-style: none;
+}
+
+ul.drop-down-two li, ul.products-menu li, ul.drop-down-three li {
+   padding: 10px;
+   white-space: nowrap;
+}
+
+/* Display dropdown on hover */
+ul.first li:hover ul {
+   display: block;
+}
+#hamburger {
+   display: none; /* Hide the hamburger icon by default */
+   cursor: pointer;
+}
+/*fifthifth-section*/
+.fifth-section{
+   position: relative;
+}
+ .container img{
+   width: 100%;
+}
+.fifth-section .container button{
+   position: absolute;
+   bottom: 50px;
+   right: 560px;
+   background-color: rgb(251, 252, 254);
+   width: 15%;
+   height: 10%;
+}
+.fifth-section button:hover{
+   background-color: black;
+   color: white;
+}
+.sixth-section{
+   padding-top: 20px;
+}
+.sixth-section .container{
+   display: grid;
+   grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+   gap:20px;
+  ;
+}
+.sixth-section .first-paraghp,.second-paragraph,.third-paragraph,.fourth-paragraph{text-align: center;
+  
+}
+.first-paraghp{
+   padding: 20px;
+   background-color: rgb(204, 255, 1);
+   font-weight: bold;
+}
+.second-paragraph{
+    padding: 20px;
+   background-color: rgb(154, 240, 223);
+   font-weight: bold;
+}
+.third-paragraph{
+    padding: 50px;
+   background-color: rgb(247, 153, 187);
+   font-weight: bold;
+   }
+.fourth-paragraph{
+    padding:50px;
+   background-color: rgb(39, 225, 102);
+   font-weight: bold;
+   }
+.image-first-para img,.image-second-para img,.image-third-para img,.image-fourth-para img{
+   width: 100%
+}
+.image-first-para img:hover,.image-second-para img:hover,.image-third-para img:hover,.image-fourth-para img:hover{
+   transform: scale(1.1);
+}
+
+.first-text {
+   margin-bottom: 30px;
+   margin-top: 10px;
+}
+.all-paragraph{
+   display: grid;
+   grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+   gap:60px;
+   padding-bottom: 50px;
+}
+.first-para,.second-para,.third-para,.fourth-para{
+   padding: 30px;
+   border: 0.2px solid ;
+   border-color: #e5e7eb;
+   border-radius:  25px;
+  
+}
+.line{
+   width: 100%;
+   }
+.first-text .deal{
+   color:#6c7fd8;
+}
+.first-text .text-deal{
+   text-transform: capitalize;
+   letter-spacing: 0.03rem;
+   line-height: 1;
+   font-size: 25px;
+   }
+.first-text span {
+   
+    line-height: 40px;
+}
+.first-text .text-time{
+   color: rgba(0, 0, 0, 0.30);
+   font-weight: bold
+}
+@keyframes bottomToTop {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.first-para, .second-para, .third-para, .fourth-para {
+    animation: bottomToTop 1s ease-out forwards;
+}
+
+.second-para {
+    animation-delay: 0.2s;
+}
+
+.third-para {
+    animation-delay: 0.4s;
+}
+
+.fourth-para {
+    animation-delay: 0.6s;
+}
+.first-footer-section .container{
+   display: flex;
+  justify-content: space-between;
+ align-items:  center;  
+}
+.social-section{
+   text-align: left;
+   padding: 2px;
+}
+.social-section i,.master-section i {
+   font-size: 30px;
+   }
+
+.social-section .fa-facebook{
+   color:rgb(60, 90, 153);
+}
+.social-section .fa-facebook:hover{
+  color: white; 
+    background-color:rgb(60, 90, 153);
+}
+.social-section .fa-square-whatsapp{
+   color: green;
+}
+.social-section .fa-square-instagram{
+   color: rgb(132, 51, 183);
+}
+.master-section{
+    padding: 2px;
+   text-align: right;
+}
+.master-section .fa-cc-visa{
+   background-color: blue;
+   color: white;
+   
+}
+.first-footer-section{
+   position: relative;
+}
+
+
+
+.second-footer-section{
+   margin-top:  1px;
+   padding: 40px;
+     display: grid;
+   grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+   gap:50px;
+   background-color: rgb(238, 238, 238);
+}
+.title{
+   color: rgb(102, 102, 102);
+   font-weight: bold;
+}
+.menu-list ul  {
+   list-style:   none;
+}
+.menu-list{
+   position: relative;
+}
+   .menu-list ul .edit::after{
+      content: '';
+  position: absolute;
+  top: 0;
+  right:100px;
+  bottom: 0;
+  width: 1px;
+  background-color: black;
+   }
+
